@@ -32,6 +32,23 @@ namespace P02ZadanieDziedziczenie
             {
                 p.Zapisz();
             }
+
+            //   Raport raport = new Raport();
+            // abstract - zabraniam proramistom tworzenia nowej isntacji klay 
+
+            // gdy mamy klasę A i B, Klasa A : B 
+            // ovverride - użyj metody z klasy A 
+            // new - użyj metody z klasy B 
+
+            object o = new object();
+            
+            PlikSQL plikSQL = new PlikSQL();
+            int unikalneId = plikSQL.GetHashCode();
+
+            object o1 = new PlikSQL();
+            object o2 = new PlikHTML();
+            object o3 = new PlikCSV();
+ 
         }
     }
 }

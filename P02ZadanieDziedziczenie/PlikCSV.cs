@@ -16,7 +16,9 @@ namespace P02ZadanieDziedziczenie
 
         public override void Zapisz()
         {
-            File.WriteAllText(Sciezka + "\\" + Nazwa + rozszerzenie, Zawartosc);
+            //   File.WriteAllText(Sciezka + "\\" + Nazwa + rozszerzenie, Zawartosc);
+            Zawartosc = Zawartosc.Replace(" ", ",");
+            base.Zapisz();
         }
     }
 }

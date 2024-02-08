@@ -14,9 +14,18 @@ namespace P02ZadanieDziedziczenie
             rozszerzenie = ".html";
         }
 
+        const string szablon = @"<html>
+                                <body>
+                                <p>{0}</p>
+                                </body>
+                                </html>";
+
         public override void Zapisz()
         {
-            File.WriteAllText(Sciezka + "\\" + Nazwa + rozszerzenie, Zawartosc);
+
+            //  File.WriteAllText(Sciezka + "\\" + Nazwa + rozszerzenie, Zawartosc);
+            Zawartosc = string.Format(szablon, Zawartosc);
+            base.Zapisz();
         }
     }
 }
