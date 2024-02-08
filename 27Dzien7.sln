@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01Dziedziczenie", "P01Dziedziczenie\P01Dziedziczenie.csproj", "{9F8115B2-8EE4-4C4B-901E-069DAD17BCD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02ZadanieDziedziczenie", "P02ZadanieDziedziczenie\P02ZadanieDziedziczenie.csproj", "{4786F1D9-8C23-47F1-B248-FD002D2F1D20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F8115B2-8EE4-4C4B-901E-069DAD17BCD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F8115B2-8EE4-4C4B-901E-069DAD17BCD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F8115B2-8EE4-4C4B-901E-069DAD17BCD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F8115B2-8EE4-4C4B-901E-069DAD17BCD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4786F1D9-8C23-47F1-B248-FD002D2F1D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4786F1D9-8C23-47F1-B248-FD002D2F1D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4786F1D9-8C23-47F1-B248-FD002D2F1D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4786F1D9-8C23-47F1-B248-FD002D2F1D20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA7DFED3-5198-41C3-8FB5-4593A9620361}
+	EndGlobalSection
+EndGlobal
