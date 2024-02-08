@@ -42,15 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\Trener.cs" />
+    <Compile Include="Services\IManagerZawodnikow.cs" />
+    <Compile Include="Services\ManagerZawodnikowAPI.cs" />
     <Compile Include="Services\ManagerZawodnikowLocal.cs" />
     <Compile Include="Services\ManagerZawodnikow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\Zawodnik.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\P02PolaczenieZBaza\P02PolaczenieZBaza.csproj">
-      <Project>{79A58E5D-09C7-4189-9DF6-7A3B8CAB0196}</Project>
-      <Name>P02PolaczenieZBaza</Name>
+    <ProjectReference Include="..\P08PolaczenieZBaza\P08PolaczenieZBaza.csproj">
+      <Project>{79a58e5d-09c7-4189-9df6-7a3b8cab0196}</Project>
+      <Name>P08PolaczenieZBaza</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

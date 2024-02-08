@@ -1,5 +1,7 @@
-﻿using P02PolaczenieZBaza;
-using P04Zawodnicy.Shared.Domain;
+﻿
+using P04Zawodnicy.Shared.Services;
+using P06Zawodnicy.Shared.Domain;
+using P08PolaczenieZBaza;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -10,10 +12,10 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P04Zawodnicy.Shared.Services
+namespace P06Zawodnicy.Shared.Services
 {
     //ten będzie działać na bazie danych
-    public class ManagerZawodnikow
+    public class ManagerZawodnikow : IManagerZawodnikow
     {
         //private List<Zawodnik> zawodnicyCache;
         //const string url = @"C:\dane\zawodnicy.txt";
@@ -134,8 +136,7 @@ namespace P04Zawodnicy.Shared.Services
                 zawodnicy[i] = z;
             }
         }
-
-
+        
         public Trener[] PodajTrenerow()
         {
             object[][] dane = pzb.WyslijPolecenieSQL("select id_trenera, imie_t, nazwisko_t from trenerzy");
@@ -197,6 +198,8 @@ namespace P04Zawodnicy.Shared.Services
             }
             
         }
+
+      
     }
 }
 

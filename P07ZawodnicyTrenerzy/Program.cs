@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P06Zawodnicy.Shared.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace P07ZawodnicyTrenerzy
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmStartowy());
+            Application.Run(new FrmStartowy(new ManagerZawodnikow()));
         }
     }
 }

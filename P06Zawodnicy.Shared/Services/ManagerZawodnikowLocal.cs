@@ -1,4 +1,6 @@
-﻿using P04Zawodnicy.Shared.Domain;
+﻿
+using P04Zawodnicy.Shared.Services;
+using P06Zawodnicy.Shared.Domain;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,9 +10,9 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P04Zawodnicy.Shared.Services
+namespace P06Zawodnicy.Shared.Services
 {
-    public class ManagerZawodnikowLocal
+    public class ManagerZawodnikowLocal : IManagerZawodnikow
     {
         private List<Zawodnik> zawodnicyCache;
         const string url = @"C:\dane\zawodnicy.txt";
@@ -152,6 +154,21 @@ namespace P04Zawodnicy.Shared.Services
                 }
 
             zawodnicyCache.Remove(zawodnikDoUsuniecia);
+        }
+
+        public void Edytuj(Zawodnik edytowany)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Trener[] PodajTrenerow()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int PodajSredniWiekZawodnikow(string kraj)
+        {
+            throw new NotImplementedException();
         }
     }
 }

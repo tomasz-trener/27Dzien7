@@ -1,5 +1,7 @@
-﻿using P04Zawodnicy.Shared.Domain;
+﻿
 using P04Zawodnicy.Shared.Services;
+using P06Zawodnicy.Shared.Domain;
+using P06Zawodnicy.Shared.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,9 +26,9 @@ namespace P07ZawodnicyTrenerzy
         private Zawodnik wyswietlany;
         private readonly FrmStartowy frmStartowy;
         private readonly TrybOkienka trybOkienka;
-        private readonly ManagerZawodnikow mz;
+        private readonly IManagerZawodnikow mz;
 
-        public FrmSzczegoly(FrmStartowy frmStartowy, TrybOkienka trybOkienka, ManagerZawodnikow mz)
+        public FrmSzczegoly(FrmStartowy frmStartowy, TrybOkienka trybOkienka, IManagerZawodnikow mz)
         {
             InitializeComponent();
             this.frmStartowy = frmStartowy;
@@ -51,7 +53,7 @@ namespace P07ZawodnicyTrenerzy
             }
         }
 
-        public FrmSzczegoly(Zawodnik zawodnik, FrmStartowy frmStartowy, TrybOkienka trybOkienka, ManagerZawodnikow mz) : this(frmStartowy, trybOkienka,mz)
+        public FrmSzczegoly(Zawodnik zawodnik, FrmStartowy frmStartowy, TrybOkienka trybOkienka, IManagerZawodnikow mz) : this(frmStartowy, trybOkienka,mz)
         {
           
             txtImie.Text = zawodnik.Imie;

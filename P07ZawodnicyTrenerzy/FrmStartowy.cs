@@ -1,6 +1,7 @@
 ﻿using P02ZawodnicyNoweOkna.Tools;
-using P04Zawodnicy.Shared.Domain;
 using P04Zawodnicy.Shared.Services;
+using P06Zawodnicy.Shared.Domain;
+using P06Zawodnicy.Shared.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,12 +16,13 @@ namespace P07ZawodnicyTrenerzy
 {
     public partial class FrmStartowy : Form
     {
-        private readonly ManagerZawodnikow mz = new ManagerZawodnikow();
-
+        private readonly IManagerZawodnikow mz;
+        
         string[] dostepneKolumny = new string[] { "Imie", "Nazwisko", "Kraj", "Waga", "Wzrost" };
 
-        public FrmStartowy()
+        public FrmStartowy(IManagerZawodnikow mz)
         {
+            this.mz = mz;
             InitializeComponent();
             Odswiez();
 
