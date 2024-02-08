@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +35,44 @@ namespace P07ZawodnicyTrenerzy
         public void Odswiez()
         {
             mz.WczytajZawodnikow();
-            cbKraje.DataSource = mz.PodajKraje();
+            var kraje  = mz.PodajKraje();
+            cbKraje.DataSource = kraje;
+            generujObraziKrajow(kraje);
+        }
+
+        private void generujObraziKrajow(string[] kraje)
+        {
+            string folderFlagi = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "flagi");
+            for (int i = 0; i < kraje.Length; i++)
+            {
+                string sciezka = Path.Combine(folderFlagi, kraje[i]+".png");
+                if (File.Exists(sciezka))
+                {
+                    PictureBox pc = new PictureBox()
+                    {
+                        Name = "pb" + kraje[i],
+                        Size = new Size(50, 30),
+                        Location = new Point(10 + i * 60, 10),
+                        ImageLocation = sciezka,
+                        SizeMode = PictureBoxSizeMode.StretchImage,
+                        Cursor = Cursors.Hand, 
+                        Tag = kraje[i]
+                    };
+                    pc.Click += flaga_Click;
+
+                    pnlFlagi.Controls.Add(pc);
+                }
+            }
+        }
+
+        private void flaga_Click(object sender, EventArgs e)
+        {
+            //problem:
+            // musimy odczytać która flaga została kliknieta 
+            PictureBox kliknietyObrazek = (PictureBox)sender;
+            string kodKraju = (string)kliknietyObrazek.Tag;
+            cbKraje.SelectedItem = kodKraju;
+
         }
 
         private void cbKraje_SelectedIndexChanged(object sender, EventArgs e)

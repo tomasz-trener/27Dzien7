@@ -39,6 +39,7 @@
             this.wbPrzegladarka = new System.Windows.Forms.WebBrowser();
             this.clbKolumny = new System.Windows.Forms.CheckedListBox();
             this.btnPokazSreniWiek = new System.Windows.Forms.Button();
+            this.pnlFlagi = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // lblRaport
@@ -144,11 +145,19 @@
             this.btnPokazSreniWiek.UseVisualStyleBackColor = true;
             this.btnPokazSreniWiek.Click += new System.EventHandler(this.btnPokazSreniWiek_Click);
             // 
+            // pnlFlagi
+            // 
+            this.pnlFlagi.Location = new System.Drawing.Point(16, 358);
+            this.pnlFlagi.Name = "pnlFlagi";
+            this.pnlFlagi.Size = new System.Drawing.Size(591, 82);
+            this.pnlFlagi.TabIndex = 15;
+            // 
             // FrmStartowy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 352);
+            this.ClientSize = new System.Drawing.Size(625, 457);
+            this.Controls.Add(this.pnlFlagi);
             this.Controls.Add(this.btnPokazSreniWiek);
             this.Controls.Add(this.clbKolumny);
             this.Controls.Add(this.wbPrzegladarka);
@@ -180,6 +189,7 @@
         private System.Windows.Forms.WebBrowser wbPrzegladarka;
         private System.Windows.Forms.CheckedListBox clbKolumny;
         private System.Windows.Forms.Button btnPokazSreniWiek;
+        private System.Windows.Forms.Panel pnlFlagi;
     }
 }
 
