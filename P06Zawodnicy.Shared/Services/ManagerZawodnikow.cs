@@ -76,12 +76,15 @@ namespace P06Zawodnicy.Shared.Services
         public void Edytuj(Zawodnik edytowany)
         {
             string id_trenera = edytowany.Id_trenera == null ? "null" : edytowany.Id_trenera.ToString();
+            string dataUr = edytowany.DataUrodzenia == null ? "null" : "'" + edytowany.DataUrodzenia.Value.ToString("yyyyMMdd") + "'";
+
+
             string sql = $@"update zawodnicy set 
                             id_trenera = '{id_trenera}',
                             imie = '{edytowany.Imie}', 
                             nazwisko= '{edytowany.Nazwisko}',
                             kraj='{edytowany.Kraj}',
-                            data_ur='{edytowany.DataUrodzenia.ToString("yyyyMMdd")}',
+                            data_ur={dataUr},
                             wzrost ={edytowany.Wzrost}, 
                             waga ={edytowany.Waga}
                             where id_zawodnika ={edytowany.Id_zawodnika}";
@@ -96,9 +99,11 @@ namespace P06Zawodnicy.Shared.Services
         {
             string szablon = "insert into zawodnicy (id_trenera,imie, nazwisko,kraj,data_ur,wzrost,waga) values ({0},'{1}','{2}','{3}','{4}',{5},{6})";
 
+            string dataUr = z.DataUrodzenia == null ? "null" : "'" + z.DataUrodzenia.Value.ToString("yyyyMMdd") + "'";
+
             string sql = string.Format(szablon,
                 z.Id_trenera == null ? "null" : z.Id_trenera.ToString(),
-                z.Imie, z.Nazwisko, z.Kraj, z.DataUrodzenia.ToString("yyyyMMdd"), z.Wzrost, z.Waga);
+                z.Imie, z.Nazwisko, z.Kraj, dataUr, z.Wzrost, z.Waga);
 
             pzb.WyslijPolecenieSQL(sql);
         }

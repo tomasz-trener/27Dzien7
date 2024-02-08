@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomDateTimePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomDateTimePicker.Designer.cs">
+      <DependentUpon>CustomDateTimePicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStartowy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\PDFManager.cs" />
+    <EmbeddedResource Include="CustomDateTimePicker.resx">
+      <DependentUpon>CustomDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmStartowy.resx">
       <DependentUpon>FrmStartowy.cs</DependentUpon>
     </EmbeddedResource>

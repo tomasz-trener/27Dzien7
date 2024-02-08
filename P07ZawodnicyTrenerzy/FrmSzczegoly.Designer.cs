@@ -37,13 +37,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dtpDataUr = new System.Windows.Forms.DateTimePicker();
             this.numWzrost = new System.Windows.Forms.NumericUpDown();
             this.numWaga = new System.Windows.Forms.NumericUpDown();
             this.btnZapisz = new System.Windows.Forms.Button();
             this.btnUsun = new System.Windows.Forms.Button();
             this.pnlKontrolkiDoEdycji = new System.Windows.Forms.Panel();
             this.cbTrenerzy = new System.Windows.Forms.ComboBox();
+            this.dtpDataUr = new P02ZawodnicyNoweOkna.CustomDateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.numWzrost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numWaga)).BeginInit();
             this.pnlKontrolkiDoEdycji.SuspendLayout();
@@ -124,14 +124,6 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Wzrost";
             // 
-            // dtpDataUr
-            // 
-            this.dtpDataUr.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataUr.Location = new System.Drawing.Point(12, 149);
-            this.dtpDataUr.Name = "dtpDataUr";
-            this.dtpDataUr.Size = new System.Drawing.Size(168, 20);
-            this.dtpDataUr.TabIndex = 12;
-            // 
             // numWzrost
             // 
             this.numWzrost.Location = new System.Drawing.Point(12, 187);
@@ -173,6 +165,7 @@
             // 
             // pnlKontrolkiDoEdycji
             // 
+            this.pnlKontrolkiDoEdycji.Controls.Add(this.dtpDataUr);
             this.pnlKontrolkiDoEdycji.Controls.Add(this.cbTrenerzy);
             this.pnlKontrolkiDoEdycji.Controls.Add(this.txtKraj);
             this.pnlKontrolkiDoEdycji.Controls.Add(this.btnUsun);
@@ -183,7 +176,6 @@
             this.pnlKontrolkiDoEdycji.Controls.Add(this.label2);
             this.pnlKontrolkiDoEdycji.Controls.Add(this.numWzrost);
             this.pnlKontrolkiDoEdycji.Controls.Add(this.txtNazwisko);
-            this.pnlKontrolkiDoEdycji.Controls.Add(this.dtpDataUr);
             this.pnlKontrolkiDoEdycji.Controls.Add(this.label4);
             this.pnlKontrolkiDoEdycji.Controls.Add(this.label5);
             this.pnlKontrolkiDoEdycji.Controls.Add(this.label3);
@@ -201,11 +193,19 @@
             this.cbTrenerzy.Size = new System.Drawing.Size(165, 21);
             this.cbTrenerzy.TabIndex = 17;
             // 
+            // dtpDataUr
+            // 
+            this.dtpDataUr.Location = new System.Drawing.Point(12, 147);
+            this.dtpDataUr.Name = "dtpDataUr";
+            this.dtpDataUr.Size = new System.Drawing.Size(168, 21);
+            this.dtpDataUr.TabIndex = 18;
+            this.dtpDataUr.Value = new System.DateTime(2024, 2, 8, 11, 41, 57, 472);
+            // 
             // FrmSzczegoly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(217, 342);
+            this.ClientSize = new System.Drawing.Size(502, 342);
             this.Controls.Add(this.pnlKontrolkiDoEdycji);
             this.Name = "FrmSzczegoly";
             this.Text = "FrmSzczegoly";
@@ -228,12 +228,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dtpDataUr;
         private System.Windows.Forms.NumericUpDown numWzrost;
         private System.Windows.Forms.NumericUpDown numWaga;
         private System.Windows.Forms.Button btnZapisz;
         private System.Windows.Forms.Button btnUsun;
         private System.Windows.Forms.Panel pnlKontrolkiDoEdycji;
         private System.Windows.Forms.ComboBox cbTrenerzy;
+        private P02ZawodnicyNoweOkna.CustomDateTimePicker dtpDataUr;
     }
 }

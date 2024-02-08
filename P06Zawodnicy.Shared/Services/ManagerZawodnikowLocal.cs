@@ -124,8 +124,9 @@ namespace P06Zawodnicy.Shared.Services
             StringBuilder sb = new StringBuilder(naglowek + Environment.NewLine);
             foreach (var z in zawodnicyCache)
             {
+                string data_ur = z.DataUrodzenia == null ? "" : z.DataUrodzenia.Value.ToString("yyyy-MM-dd");
                 string wiersz = string.Format(szablon,
-                    z.Id_zawodnika, z.Id_trenera, z.Imie, z.Nazwisko, z.Kraj, z.DataUrodzenia.ToString("yyyy-MM-dd"), z.Wzrost, z.Waga);
+                    z.Id_zawodnika, z.Id_trenera, z.Imie, z.Nazwisko, z.Kraj, data_ur, z.Wzrost, z.Waga);
                 sb.AppendLine(wiersz);
             }
             File.WriteAllText(url, sb.ToString(), Encoding.UTF8);
