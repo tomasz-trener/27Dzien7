@@ -1,4 +1,5 @@
-﻿using P02ZawodnicyNoweOkna.Tools;
+﻿using P02ZawodnicyNoweOkna;
+using P02ZawodnicyNoweOkna.Tools;
 using P04Zawodnicy.Shared.Services;
 using P06Zawodnicy.Shared.Domain;
 using P06Zawodnicy.Shared.Services;
@@ -160,6 +161,12 @@ namespace P07ZawodnicyTrenerzy
             string wybranyKraj = cbKraje.SelectedItem.ToString();
             int sredniWiek = mz.PodajSredniWiekZawodnikow(wybranyKraj);
             MessageBox.Show($"Średni wiek zaowdników z kraju {wybranyKraj}: {sredniWiek}");
+        }
+
+        private void btnWyszukiwarka_Click(object sender, EventArgs e)
+        {
+            FrmWyszukiwarka frmWyszukiwarka = new FrmWyszukiwarka(mz);
+            frmWyszukiwarka.Show();
         }
     }
 }

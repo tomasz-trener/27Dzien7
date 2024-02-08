@@ -1,4 +1,5 @@
 ﻿
+using P04Zawodnicy.Shared.Domain;
 using P04Zawodnicy.Shared.Services;
 using P06Zawodnicy.Shared.Domain;
 using System;
@@ -168,6 +169,11 @@ namespace P06Zawodnicy.Shared.Services
         }
 
         public int PodajSredniWiekZawodnikow(string kraj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Osoba> WyszukajOsoby(string fragmentNazwy)
         {
             throw new NotImplementedException();
         }

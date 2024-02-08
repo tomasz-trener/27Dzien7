@@ -1,4 +1,5 @@
-﻿using P06Zawodnicy.Shared.Domain;
+﻿using P04Zawodnicy.Shared.Domain;
+using P06Zawodnicy.Shared.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,6 +56,11 @@ namespace P04Zawodnicy.Shared.Services
         }
 
         public Zawodnik[] WczytajZawodnikow()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Osoba> WyszukajOsoby(string fragmentNazwy)
         {
             throw new NotImplementedException();
         }

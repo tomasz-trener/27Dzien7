@@ -1,0 +1,11 @@
+﻿
+1) wprowadzenie do dziedzizenia
+2) wprowadzenie do intrefejsów 
+3) skopiowanie projektu koncowego wraz z bibliotekami do nazsej solucji 
+4) wdrożyliśmy intrefejsy do managerZawodnikow 
+5) dodalismy customowa kontrolke datetimePicker 
+  (uwaga - trzeba bylo zmienic w zawodniku datetime na nullable i tym samym poprawic managerZawodnikow sql zeby przyjmował wartosci puste)
+6) nauczylismy sie dynamicznego generowania kontrolek 
+ a) stowrzenie pobieracza flag 
+ b) uzlismy tych obrazkow do zadania w ktorym nalezalo wyswietlic flagi jako picture boxy do filtrowaniakrajow 
+7) zadanie ze stworzeniem wyszukiwarki zawodnikow 

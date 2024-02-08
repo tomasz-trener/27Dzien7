@@ -1,4 +1,5 @@
 ﻿
+using P04Zawodnicy.Shared.Domain;
 using P04Zawodnicy.Shared.Services;
 using P06Zawodnicy.Shared.Domain;
 using P08PolaczenieZBaza;
@@ -144,7 +145,7 @@ namespace P06Zawodnicy.Shared.Services
         
         public Trener[] PodajTrenerow()
         {
-            object[][] dane = pzb.WyslijPolecenieSQL("select id_trenera, imie_t, nazwisko_t from trenerzy");
+            object[][] dane = pzb.WyslijPolecenieSQL("select id_trenera, imie_t, nazwisko_t, data_ur_t from trenerzy");
             Trener[] trenerzy = new Trener[dane.Length];
             for (int i = 0; i < dane.Length; i++)
             {
@@ -152,8 +153,11 @@ namespace P06Zawodnicy.Shared.Services
                 {
                     Id = (int)dane[i][0],
                     Imie = (string)dane[i][1],
-                    Nazwisko = (string)dane[i][2]
+                    Nazwisko = (string)dane[i][2],
                 };
+
+                if (dane[i][3] != DBNull.Value)
+                    trenerzy[i].DataUrodzenia = (DateTime)dane[i][3];
             }
             return trenerzy;
         }
@@ -204,7 +208,23 @@ namespace P06Zawodnicy.Shared.Services
             
         }
 
-      
+        public List<Osoba> WyszukajOsoby(string fragmentNazwy)
+        {
+            List<Osoba> osoby = new List<Osoba>();
+            osoby.AddRange(WczytajZawodnikow());
+            osoby.AddRange(PodajTrenerow());
+
+            List<Osoba> wyniki = new List<Osoba>();
+
+            foreach (var o in osoby)
+            {
+                if(o.Imie.ToLower().Contains(fragmentNazwy.ToLower()) || o.Nazwisko.ToLower().Contains(fragmentNazwy.ToLower()))
+                    wyniki.Add(o);
+            }
+
+            wyniki.Sort();
+            return wyniki;
+        }
     }
 }
 

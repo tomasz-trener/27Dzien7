@@ -40,6 +40,7 @@
             this.clbKolumny = new System.Windows.Forms.CheckedListBox();
             this.btnPokazSreniWiek = new System.Windows.Forms.Button();
             this.pnlFlagi = new System.Windows.Forms.Panel();
+            this.btnWyszukiwarka = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblRaport
@@ -129,9 +130,9 @@
             // 
             this.clbKolumny.CheckOnClick = true;
             this.clbKolumny.FormattingEnabled = true;
-            this.clbKolumny.Location = new System.Drawing.Point(261, 208);
+            this.clbKolumny.Location = new System.Drawing.Point(261, 238);
             this.clbKolumny.Name = "clbKolumny";
-            this.clbKolumny.Size = new System.Drawing.Size(75, 124);
+            this.clbKolumny.Size = new System.Drawing.Size(75, 94);
             this.clbKolumny.TabIndex = 13;
             this.clbKolumny.SelectedIndexChanged += new System.EventHandler(this.clbKolumny_SelectedIndexChanged);
             // 
@@ -152,11 +153,22 @@
             this.pnlFlagi.Size = new System.Drawing.Size(591, 82);
             this.pnlFlagi.TabIndex = 15;
             // 
+            // btnWyszukiwarka
+            // 
+            this.btnWyszukiwarka.Location = new System.Drawing.Point(263, 209);
+            this.btnWyszukiwarka.Name = "btnWyszukiwarka";
+            this.btnWyszukiwarka.Size = new System.Drawing.Size(75, 23);
+            this.btnWyszukiwarka.TabIndex = 16;
+            this.btnWyszukiwarka.Text = "Wyszukiwarka";
+            this.btnWyszukiwarka.UseVisualStyleBackColor = true;
+            this.btnWyszukiwarka.Click += new System.EventHandler(this.btnWyszukiwarka_Click);
+            // 
             // FrmStartowy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 457);
+            this.Controls.Add(this.btnWyszukiwarka);
             this.Controls.Add(this.pnlFlagi);
             this.Controls.Add(this.btnPokazSreniWiek);
             this.Controls.Add(this.clbKolumny);
@@ -190,6 +202,7 @@
         private System.Windows.Forms.CheckedListBox clbKolumny;
         private System.Windows.Forms.Button btnPokazSreniWiek;
         private System.Windows.Forms.Panel pnlFlagi;
+        private System.Windows.Forms.Button btnWyszukiwarka;
     }
 }
 

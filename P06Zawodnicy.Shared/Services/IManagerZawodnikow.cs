@@ -1,4 +1,5 @@
-﻿using P06Zawodnicy.Shared.Domain;
+﻿using P04Zawodnicy.Shared.Domain;
+using P06Zawodnicy.Shared.Domain;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -27,6 +28,8 @@ namespace P04Zawodnicy.Shared.Services
 
         Trener[] PodajTrenerow();
         int PodajSredniWiekZawodnikow(string kraj);
+
+        List<Osoba> WyszukajOsoby(string fragmentNazwy);
          
     }
 }
