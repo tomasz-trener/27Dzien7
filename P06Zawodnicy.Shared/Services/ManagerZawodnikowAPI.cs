@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace P04Zawodnicy.Shared.Services
 {
-    internal class ManagerZawodnikowAPI : IManagerZawodnikow
+    public class ManagerZawodnikowAPI : IManagerZawodnikow
     {
         public void Dodaj(Zawodnik z)
         {
