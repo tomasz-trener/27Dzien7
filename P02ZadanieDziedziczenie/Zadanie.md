@@ -1,4 +1,4 @@
-﻿ Wersja podstawowa:
+﻿Wersja podstawowa:
 Tworzysz program do generowania raportów w postaci plików: .CSV, .HTML, .SQL. 
 Każdy z plików posiada zawartość, rozmiar, autora, ścieżkę, nazwę. 
 Każdy z plików to powinna być osobna klasa. Każdy z plików posiada także metodę „Zapisz”, 
